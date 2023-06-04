@@ -45,12 +45,6 @@ export default {
             ]
           }
         ],
-        validator: (args) => ({
-          format: yup.string().required({
-            id: 'strapi-rich-text.options.advanced.required.description',
-            defaultMessage: `You won't be able to create an entry if this field is empty`
-          })
-        })
       }
     });
     app.customFields.register({
@@ -95,12 +89,6 @@ export default {
             ]
           }
         ],
-        validator: (args) => ({
-          format: yup.string().required({
-            id: 'strapi-rich-text.options.advanced.required.description',
-            defaultMessage: `You won't be able to create an entry if this field is empty`
-          })
-        })
       }
     });
   },
