@@ -12,7 +12,9 @@
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
     "@strapi/icons": "^1.6.3",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-contenteditable": "^3.3.7",
+    "sanitize-html": "^2.10.0"
   },
   "devDependencies": {
     "react": "^17.0.2",
