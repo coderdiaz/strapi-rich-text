@@ -3,5 +3,4 @@
 // because so many services require support for it.
 
 // TODO: Change this to a more robust solution using Selection and Range APIs
-export const execCommand = (command) =>
-  document.execCommand(command, false, null)
+export const execCommand = (command) => document.execCommand(command, false, null);
