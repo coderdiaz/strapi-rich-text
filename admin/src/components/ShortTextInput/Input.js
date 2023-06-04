@@ -3,7 +3,7 @@ import { Box } from '@strapi/design-system';
 import styled from 'styled-components';
 import ContentEditable from 'react-contenteditable';
 import Toolbar from '../Toolbar';
-import { sanitizer } from '../../utils/sanitizer';
+import { sanitizer, shortTextConfig } from '../../utils/sanitizer';
 
 const Input = ({ onChange, value, name }) => {
   const update = (value) => {
@@ -20,18 +20,18 @@ const Input = ({ onChange, value, name }) => {
     const plainText = e.clipboardData.getData('text/plain');
     const html = e.clipboardData.getData('text/html');
 
-    update(sanitizer(html || plainText));
+    update(sanitizer(html || plainText, shortTextConfig));
   };
 
   const handleOnChange = (e) => {
-    update(sanitizer(e.target.value));
+    update(sanitizer(e.target.value, shortTextConfig));
   };
 
   const onHandleClearFormat = () => {
     const tempElement = document.createElement('div');
     tempElement.innerHTML = value;
     const plainText = tempElement.innerText;
-    update(sanitizer(plainText));
+    update(sanitizer(plainText, shortTextConfig));
   };
 
   return (

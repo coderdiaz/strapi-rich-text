@@ -1,7 +1,13 @@
 import sanitizeHtml from 'sanitize-html';
 
-const config = {
-  allowedTags: ['b', 'i', 'strong']
+const DEFAULT_ALLOWED_TAGS = ['b', 'i', 'strong']
+
+export const shortTextConfig = {
+  allowedTags: DEFAULT_ALLOWED_TAGS,
 };
 
-export const sanitizer = (html) => sanitizeHtml(html, config);
+export const longTextConfig = {
+  allowedTags: [...DEFAULT_ALLOWED_TAGS, 'p', 'br'],
+};
+
+export const sanitizer = (html, config) => sanitizeHtml(html, config);
