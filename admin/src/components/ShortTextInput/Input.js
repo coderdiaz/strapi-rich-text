@@ -27,6 +27,13 @@ const Input = ({ onChange, value, name }) => {
     update(sanitizer(e.target.value))
   }
 
+  const onHandleClearFormat = () => {
+    const tempElement = document.createElement('div')
+    tempElement.innerHTML = value
+    const plainText = tempElement.innerText
+    update(sanitizer(plainText))
+  }
+
   return (
     <InputBox>
       <InputWrapper>
@@ -37,7 +44,7 @@ const Input = ({ onChange, value, name }) => {
           onPaste={handleOnPaste}
           onChange={handleOnChange}
         />
-        <StyledToolbar />
+        <StyledToolbar onHandleClearFormat={onHandleClearFormat} />
       </InputWrapper>
     </InputBox>
   )

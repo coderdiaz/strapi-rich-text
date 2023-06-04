@@ -5,7 +5,11 @@ import Bold from './Icons/Bold'
 import ClearFormat from './Icons/ClearFormat'
 import { execCommand } from '../utils/commands'
 
-const Toolbar = ({ className }) => {
+const Toolbar = ({ className, onHandleClearFormat }) => {
+  const onHandleClearFormatAction = () => {
+    if (onHandleClearFormat) onHandleClearFormat()
+  }
+
   return (
     <Stack spacing={2} horizontal className={className}>
       <Tooltip description="Bold">
@@ -14,7 +18,7 @@ const Toolbar = ({ className }) => {
         </ToolbarAction>
       </Tooltip>
       <Tooltip description="Clear format">
-        <ToolbarAction variant="tertiary">
+        <ToolbarAction onClick={onHandleClearFormatAction} variant="tertiary">
           <ClearFormat size={16} />
         </ToolbarAction>
       </Tooltip>
