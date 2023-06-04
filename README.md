@@ -2,7 +2,7 @@
 
 A Strapi v4 custom fields to add richness and emphasis to short and long texts.
 
-![Blueprint](./blueprint.jpg)
+![Blueprint](https://github.com/coderdiaz/strapi-rich-text/raw/main/blueprint.jpg)
 
 ### ⚡ Features
 
