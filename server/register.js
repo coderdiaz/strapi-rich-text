@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = ({ strapi }) => {
   strapi.customFields.register([
@@ -12,5 +12,5 @@ module.exports = ({ strapi }) => {
       plugin: 'strapi-rich-text',
       type: 'string',
     },
-  ]);
-};
+  ])
+}
