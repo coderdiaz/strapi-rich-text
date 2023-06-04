@@ -1,4 +1,6 @@
 {
   "strapi-rich-text.short.label": "Rich Short Text",
-  "strapi-rich-text.short.description": "Best for short texts. It also enables richness on the field."
+  "strapi-rich-text.short.description": "Best for short texts. It also enables richness on the field.",
+  "strapi-rich-text.options.advanced.required.label": "Required",
+  "strapi-rich-text.options.advanced.required.description": "You won't be able to create an entry if this field is empty"
 }
