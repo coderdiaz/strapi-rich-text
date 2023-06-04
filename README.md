@@ -6,7 +6,7 @@ A Strapi v4 custom fields to add richness and emphasis to short and long texts.
 
 ### ⚡ Features
 
-- [New] Custom fields: Allow to capture a formatted text value (Bold, Clear format).
+- [New] Custom fields: Enable capturing of a formatted text value (bold, clear formatting).
 
 ### ✨ Install
 
@@ -30,31 +30,34 @@ npm run build
 
 ### Usage
 
-The `value` is stored by default in `html` format, so you can inject it into any element. The HTML code is sanitized to prevent any malicious JavaScript code so don't worry about it.
+The `value` is stored in `HTML` format by default, allowing it to be injected into any element. The HTML code is sanitized to ensure that no malicious JavaScript code can be executed, providing peace of mind.
 
 #### React/Next.js
 
 ```tsx
 <h1 dangerouslySetInnerHTML={{ __html: yourFieldName }} />
+<div dangerouslySetInnerHTML={{ __html: yourFieldName }} />
 ```
 
 #### Vue
 
 ```html
 <h1 v-html="yourFieldName" />
+<div v-html="yourFieldName" />
 ```
 
 #### Svelte
 
 ```html
 <h1>{@html yourFieldName}</h1>
+<div>{@html yourFieldName}</div>
 ```
 
 ### Roadmap
 
-- [ ] Change use of deprecated `execCommand` method for use `Selection` and `Range` APIs.
-- [ ] Add new translation for available languages in Strapi.
-- [ ] Add support to save content on Markdown.
+- [ ] Replace the deprecated `execCommand` method with the `Selection` and `Range` APIs for improved functionality.
+- [ ] Add new translations for the available languages in Strapi to ensure users have access to a localized version of the platform..
+- [ ] Add functionality to enable content to be saved in Markdown format..
 - [ ] Migrate to TypeScript.
 
 ### How to contribute
@@ -68,7 +71,7 @@ export default {
   },
 };
 ```
-3. To test the plugin in development mode, you can use the `--watch-admin` command..
+3. To test the plugin in development mode, you can use the `--watch-admin` command.
 ```sh
 yarn develop --watch-admin
 ```
