@@ -1,6 +1,6 @@
 {
   "name": "strapi-rich-text",
-  "version": "1.0.0-canary.2",
+  "version": "1.0.0-canary.3",
   "description": "A Strapi v4 custom fields to add richness and emphasis to short and long texts.",
   "strapi": {
     "name": "strapi-rich-text",
